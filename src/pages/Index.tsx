@@ -3,10 +3,22 @@ import Icon from "@/components/ui/icon";
 
 const HERO_IMAGE = "https://cdn.poehali.dev/projects/864308a6-177f-45f8-aa6e-475f8ee5a336/files/fe0c92d8-fda2-4fc5-85a8-d9a5e2e817d7.jpg";
 const VOLUNTEERS_IMAGE = "https://cdn.poehali.dev/projects/864308a6-177f-45f8-aa6e-475f8ee5a336/files/c9f0c243-a7da-4175-a542-7c39486d4d3f.jpg";
-const VIDEO_CALL_IMAGE = "https://cdn.poehali.dev/projects/864308a6-177f-45f8-aa6e-475f8ee5a336/files/b69aeb7f-8def-467a-aedc-fa055985268f.jpg";
+
+const IMG_WHATSAPP = "https://cdn.poehali.dev/projects/864308a6-177f-45f8-aa6e-475f8ee5a336/files/af09c61d-a1cb-4eda-84a5-92a218883bb2.jpg";
+const IMG_GOSUSLUGI = "https://cdn.poehali.dev/projects/864308a6-177f-45f8-aa6e-475f8ee5a336/files/fa12f07a-c00d-4092-beb3-758ee42e9bb8.jpg";
+const IMG_FRAUD = "https://cdn.poehali.dev/projects/864308a6-177f-45f8-aa6e-475f8ee5a336/files/e6e3ad18-43cf-4c67-bdd4-9086cf2be1a6.jpg";
+const IMG_WIFI = "https://cdn.poehali.dev/projects/864308a6-177f-45f8-aa6e-475f8ee5a336/files/18faba7b-4e59-43ed-9746-2d8d972801a4.jpg";
+
+const IMG_VIDEO1 = "https://cdn.poehali.dev/projects/864308a6-177f-45f8-aa6e-475f8ee5a336/files/47fb856f-bc66-46f0-884b-f38fb2c0f673.jpg";
+const IMG_VIDEO2 = "https://cdn.poehali.dev/projects/864308a6-177f-45f8-aa6e-475f8ee5a336/files/fa12f07a-c00d-4092-beb3-758ee42e9bb8.jpg";
+const IMG_VIDEO3 = "https://cdn.poehali.dev/projects/864308a6-177f-45f8-aa6e-475f8ee5a336/files/e6e3ad18-43cf-4c67-bdd4-9086cf2be1a6.jpg";
+const IMG_VIDEO4 = "https://cdn.poehali.dev/projects/864308a6-177f-45f8-aa6e-475f8ee5a336/files/3a7c633f-330c-4ca0-a017-779b1b982652.jpg";
+const IMG_VIDEO5 = "https://cdn.poehali.dev/projects/864308a6-177f-45f8-aa6e-475f8ee5a336/files/fdb3a094-0bbf-44b6-9d09-e4d33dd2daa4.jpg";
+const IMG_VIDEO6 = "https://cdn.poehali.dev/projects/864308a6-177f-45f8-aa6e-475f8ee5a336/files/af09c61d-a1cb-4eda-84a5-92a218883bb2.jpg";
 
 const NAV_LINKS = [
   { label: "Инструкции", href: "#instructions" },
+  { label: "Видеоуроки", href: "#videos" },
   { label: "Поддержка", href: "#support" },
   { label: "Быт", href: "#everyday" },
   { label: "Технологии", href: "#digital" },
@@ -14,16 +26,49 @@ const NAV_LINKS = [
 ];
 
 const INSTRUCTIONS = [
-  { icon: "Smartphone", title: "Как позвонить через WhatsApp", steps: ["Откройте приложение", "Нажмите на имя человека", "Нажмите зелёную трубку"], tag: "Мессенджеры" },
-  { icon: "CreditCard", title: "Оплата через Госуслуги", steps: ["Войдите в личный кабинет", "Выберите раздел «Платежи»", "Введите номер квитанции"], tag: "Госуслуги" },
-  { icon: "ShieldCheck", title: "Как не попасться мошенникам", steps: ["Никогда не называйте код из СМС", "Перезвоните в банк сами", "Сообщите родственникам"], tag: "Безопасность" },
-  { icon: "Wifi", title: "Подключение к Wi-Fi", steps: ["Откройте Настройки", "Выберите «Wi-Fi»", "Найдите сеть и введите пароль"], tag: "Устройства" },
+  {
+    icon: "Smartphone",
+    title: "Как позвонить через WhatsApp",
+    steps: ["Откройте приложение", "Нажмите на имя человека", "Нажмите зелёную трубку"],
+    tag: "Мессенджеры",
+    image: IMG_WHATSAPP,
+    imageAlt: "Экран WhatsApp с кнопкой звонка",
+  },
+  {
+    icon: "CreditCard",
+    title: "Оплата через Госуслуги",
+    steps: ["Войдите в личный кабинет", "Выберите раздел «Платежи»", "Введите номер квитанции"],
+    tag: "Госуслуги",
+    image: IMG_GOSUSLUGI,
+    imageAlt: "Экран портала Госуслуги",
+  },
+  {
+    icon: "ShieldCheck",
+    title: "Как не попасться мошенникам",
+    steps: ["Никогда не называйте код из СМС", "Перезвоните в банк сами", "Сообщите родственникам"],
+    tag: "Безопасность",
+    image: IMG_FRAUD,
+    imageAlt: "Предупреждение о мошенниках на смартфоне",
+  },
+  {
+    icon: "Wifi",
+    title: "Подключение к Wi-Fi",
+    steps: ["Откройте Настройки", "Выберите «Wi-Fi»", "Найдите сеть и введите пароль"],
+    tag: "Устройства",
+    image: IMG_WIFI,
+    imageAlt: "Экран настроек Wi-Fi на телефоне",
+  },
 ];
 
+const VIDEO_CATEGORIES = ["Все", "Мессенджеры", "Госуслуги", "Безопасность", "Смартфон", "Помощь"];
+
 const VIDEOS = [
-  { title: "Как настроить видеозвонок", duration: "4:32", category: "Мессенджеры", thumb: VIDEO_CALL_IMAGE },
-  { title: "Личный кабинет на Госуслугах", duration: "7:15", category: "Госуслуги", thumb: VOLUNTEERS_IMAGE },
-  { title: "Безопасность в интернете", duration: "5:50", category: "Безопасность", thumb: HERO_IMAGE },
+  { title: "Как настроить видеозвонок в WhatsApp", duration: "4:32", category: "Мессенджеры", thumb: IMG_VIDEO1, youtubeId: "" },
+  { title: "Личный кабинет на Госуслугах с нуля", duration: "7:15", category: "Госуслуги", thumb: IMG_VIDEO2, youtubeId: "" },
+  { title: "Защита от телефонных мошенников", duration: "5:50", category: "Безопасность", thumb: IMG_VIDEO3, youtubeId: "" },
+  { title: "Первые шаги со смартфоном", duration: "9:20", category: "Смартфон", thumb: IMG_VIDEO4, youtubeId: "" },
+  { title: "Волонтёр помогает освоить планшет", duration: "6:05", category: "Помощь", thumb: IMG_VIDEO5, youtubeId: "" },
+  { title: "Звонки и сообщения: полный гайд", duration: "8:44", category: "Мессенджеры", thumb: IMG_VIDEO6, youtubeId: "" },
 ];
 
 const SUPPORT_CARDS = [
@@ -60,6 +105,12 @@ const ACTIVITIES = [
 export default function Index() {
   const [activeStep, setActiveStep] = useState<number | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeVideoCategory, setActiveVideoCategory] = useState("Все");
+  const [playingVideo, setPlayingVideo] = useState<number | null>(null);
+
+  const filteredVideos = activeVideoCategory === "Все"
+    ? VIDEOS
+    : VIDEOS.filter((v) => v.category === activeVideoCategory);
 
   return (
     <div className="min-h-screen bg-background">
@@ -162,77 +213,122 @@ export default function Index() {
           <h2 className="font-display text-4xl md:text-5xl font-semibold text-foreground mb-4">Инструкции</h2>
           <div className="section-divider mb-4" />
           <p className="font-body text-muted-foreground text-lg max-w-xl">
-            Объясняем сложные вещи простыми словами — без технического жаргона
+            Объясняем сложные вещи простыми словами — с картинками экранов
           </p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {INSTRUCTIONS.map((item, i) => (
             <div
               key={i}
-              className={`bg-card border border-border rounded-2xl p-6 card-hover cursor-pointer ${activeStep === i ? "ring-2 ring-primary" : ""}`}
+              className={`bg-card border border-border rounded-2xl overflow-hidden card-hover cursor-pointer ${activeStep === i ? "ring-2 ring-primary" : ""}`}
               onClick={() => setActiveStep(activeStep === i ? null : i)}
             >
-              <div className="w-12 h-12 bg-accent rounded-xl flex items-center justify-center mb-4">
-                <Icon name={item.icon} size={22} className="text-primary" />
+              <div className="relative aspect-[4/3] overflow-hidden bg-muted">
+                <img
+                  src={item.image}
+                  alt={item.imageAlt}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute top-3 left-3">
+                  <span className="text-xs font-body bg-background/90 text-foreground px-2 py-1 rounded-full shadow-sm">{item.tag}</span>
+                </div>
               </div>
-              <span className="inline-block text-xs font-body bg-muted text-muted-foreground px-2 py-0.5 rounded-full mb-3">{item.tag}</span>
-              <h3 className="font-body font-semibold text-foreground text-base mb-3 leading-snug">{item.title}</h3>
-              {activeStep === i ? (
-                <ol className="space-y-2 animate-fade-in">
-                  {item.steps.map((step, j) => (
-                    <li key={j} className="flex items-start gap-2 text-sm font-body text-muted-foreground">
-                      <span className="w-5 h-5 rounded-full bg-primary text-primary-foreground text-xs flex items-center justify-center flex-shrink-0 mt-0.5">{j + 1}</span>
-                      {step}
+              <div className="p-5">
+                <div className="flex items-center gap-2 mb-3">
+                  <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Icon name={item.icon} size={16} className="text-primary" />
+                  </div>
+                  <h3 className="font-body font-semibold text-foreground text-sm leading-snug">{item.title}</h3>
+                </div>
+                {activeStep === i ? (
+                  <ol className="space-y-2 animate-fade-in">
+                    {item.steps.map((step, j) => (
+                      <li key={j} className="flex items-start gap-2 text-sm font-body text-muted-foreground">
+                        <span className="w-5 h-5 rounded-full bg-primary text-primary-foreground text-xs flex items-center justify-center flex-shrink-0 mt-0.5">{j + 1}</span>
+                        {step}
+                      </li>
+                    ))}
+                    <li className="pt-1">
+                      <button className="text-xs text-primary font-body flex items-center gap-1">
+                        Свернуть <Icon name="ChevronUp" size={12} />
+                      </button>
                     </li>
-                  ))}
-                </ol>
-              ) : (
-                <p className="text-xs font-body text-muted-foreground flex items-center gap-1">
-                  Нажмите, чтобы открыть
-                  <Icon name="ChevronDown" size={12} />
-                </p>
-              )}
+                  </ol>
+                ) : (
+                  <button className="text-xs font-body text-primary flex items-center gap-1">
+                    Смотреть шаги
+                    <Icon name="ChevronDown" size={12} />
+                  </button>
+                )}
+              </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* VIDEO */}
-      <section className="bg-muted py-20">
+      {/* VIDEOS */}
+      <section id="videos" className="bg-muted py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="mb-12">
+          <div className="mb-10">
             <p className="font-body text-sm text-primary font-medium uppercase tracking-widest mb-3">Смотреть и повторять</p>
-            <h2 className="font-display text-4xl md:text-5xl font-semibold text-foreground mb-4">Видеоинструкции</h2>
+            <h2 className="font-display text-4xl md:text-5xl font-semibold text-foreground mb-4">Видеоуроки</h2>
             <div className="section-divider mb-4" />
-            <p className="font-body text-muted-foreground text-lg max-w-xl">
-              Подробный разбор с экрана — видите каждое нажатие
+            <p className="font-body text-muted-foreground text-lg max-w-xl mb-7">
+              Видите каждое нажатие — просто повторяйте вместе с нами
             </p>
+            <div className="flex flex-wrap gap-2">
+              {VIDEO_CATEGORIES.map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => setActiveVideoCategory(cat)}
+                  className={`font-body text-sm px-4 py-2 rounded-full border transition-colors ${
+                    activeVideoCategory === cat
+                      ? "bg-primary text-primary-foreground border-primary"
+                      : "bg-background text-muted-foreground border-border hover:border-primary hover:text-foreground"
+                  }`}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
-            {VIDEOS.map((v, i) => (
-              <div key={i} className="group relative rounded-2xl overflow-hidden cursor-pointer card-hover">
-                <div className="aspect-video relative">
-                  <img src={v.thumb} alt={v.title} className="w-full h-full object-cover" />
-                  <div className="video-card-overlay absolute inset-0" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-14 h-14 rounded-full bg-white/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                      <Icon name="Play" size={22} className="text-primary ml-1" />
-                    </div>
-                  </div>
-                  <div className="absolute bottom-3 right-3 bg-black/60 text-white text-xs font-body px-2 py-0.5 rounded">{v.duration}</div>
+            {filteredVideos.map((v, i) => (
+              <div key={i} className="group rounded-2xl overflow-hidden card-hover bg-background border border-border">
+                <div className="aspect-video relative cursor-pointer" onClick={() => setPlayingVideo(playingVideo === i ? null : i)}>
+                  {playingVideo === i && v.youtubeId ? (
+                    <iframe
+                      className="w-full h-full"
+                      src={`https://www.youtube.com/embed/${v.youtubeId}?autoplay=1`}
+                      allow="autoplay; encrypted-media"
+                      allowFullScreen
+                      title={v.title}
+                    />
+                  ) : (
+                    <>
+                      <img src={v.thumb} alt={v.title} className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" />
+                      <div className="video-card-overlay absolute inset-0" />
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-14 h-14 rounded-full bg-white/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                          <Icon name="Play" size={22} className="text-primary ml-1" />
+                        </div>
+                      </div>
+                      <div className="absolute bottom-3 right-3 bg-black/60 text-white text-xs font-body px-2 py-0.5 rounded-md">{v.duration}</div>
+                      <div className="absolute top-3 left-3">
+                        <span className="text-xs font-body bg-primary text-primary-foreground px-2 py-1 rounded-full">{v.category}</span>
+                      </div>
+                    </>
+                  )}
                 </div>
-                <div className="bg-card p-4 border border-border border-t-0 rounded-b-2xl">
-                  <span className="text-xs text-primary font-body font-medium">{v.category}</span>
-                  <h3 className="font-body font-semibold text-foreground text-base mt-1 leading-snug">{v.title}</h3>
+                <div className="p-4">
+                  <h3 className="font-body font-semibold text-foreground text-base leading-snug">{v.title}</h3>
+                  <div className="flex items-center gap-2 mt-2 text-muted-foreground text-xs font-body">
+                    <Icon name="Clock" size={12} />
+                    {v.duration}
+                  </div>
                 </div>
               </div>
             ))}
-          </div>
-          <div className="text-center mt-8">
-            <button className="inline-flex items-center gap-2 border border-border text-foreground font-body font-medium px-6 py-3 rounded-xl hover:bg-card transition-colors">
-              Все видеоуроки
-              <Icon name="ArrowRight" size={16} />
-            </button>
           </div>
         </div>
       </section>
