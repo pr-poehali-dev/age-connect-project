@@ -4,17 +4,22 @@ import Icon from "@/components/ui/icon";
 const HERO_IMAGE = "https://cdn.poehali.dev/projects/864308a6-177f-45f8-aa6e-475f8ee5a336/files/fe0c92d8-fda2-4fc5-85a8-d9a5e2e817d7.jpg";
 const VOLUNTEERS_IMAGE = "https://cdn.poehali.dev/projects/864308a6-177f-45f8-aa6e-475f8ee5a336/files/c9f0c243-a7da-4175-a542-7c39486d4d3f.jpg";
 
+// Туториалы — картинки
 const IMG_WHATSAPP = "https://cdn.poehali.dev/projects/864308a6-177f-45f8-aa6e-475f8ee5a336/files/af09c61d-a1cb-4eda-84a5-92a218883bb2.jpg";
 const IMG_GOSUSLUGI = "https://cdn.poehali.dev/projects/864308a6-177f-45f8-aa6e-475f8ee5a336/files/fa12f07a-c00d-4092-beb3-758ee42e9bb8.jpg";
 const IMG_FRAUD = "https://cdn.poehali.dev/projects/864308a6-177f-45f8-aa6e-475f8ee5a336/files/e6e3ad18-43cf-4c67-bdd4-9086cf2be1a6.jpg";
 const IMG_WIFI = "https://cdn.poehali.dev/projects/864308a6-177f-45f8-aa6e-475f8ee5a336/files/18faba7b-4e59-43ed-9746-2d8d972801a4.jpg";
+const IMG_APPINSTALL = "https://cdn.poehali.dev/projects/864308a6-177f-45f8-aa6e-475f8ee5a336/files/712e43e9-5411-4792-920d-fcfeaa81090b.jpg";
+const IMG_TABLET = "https://cdn.poehali.dev/projects/864308a6-177f-45f8-aa6e-475f8ee5a336/files/285c325b-47e3-435b-8f8b-8b71114bdd1c.jpg";
+const IMG_BANK = "https://cdn.poehali.dev/projects/864308a6-177f-45f8-aa6e-475f8ee5a336/files/1b4cd58a-aebc-45b0-85cf-20ea886a0056.jpg";
+const IMG_TELEGRAM = "https://cdn.poehali.dev/projects/864308a6-177f-45f8-aa6e-475f8ee5a336/files/e4f7ff21-e54a-4d40-94e1-e353b2a24cf8.jpg";
+const IMG_EMAIL = "https://cdn.poehali.dev/projects/864308a6-177f-45f8-aa6e-475f8ee5a336/files/b0d6b517-d88c-4158-8942-034e715c80e5.jpg";
+const IMG_PHARMACY = "https://cdn.poehali.dev/projects/864308a6-177f-45f8-aa6e-475f8ee5a336/files/b4ff839a-651b-46e9-9182-9af71df26c99.jpg";
+const IMG_VIDEOCALL = "https://cdn.poehali.dev/projects/864308a6-177f-45f8-aa6e-475f8ee5a336/files/a0382195-8719-4d72-846b-4b33c49ed68f.jpg";
+const IMG_BILL = "https://cdn.poehali.dev/projects/864308a6-177f-45f8-aa6e-475f8ee5a336/files/b31cad70-06bd-4824-bd51-5d05ee255ffa.jpg";
 
-const IMG_VIDEO1 = "https://cdn.poehali.dev/projects/864308a6-177f-45f8-aa6e-475f8ee5a336/files/47fb856f-bc66-46f0-884b-f38fb2c0f673.jpg";
-const IMG_VIDEO2 = "https://cdn.poehali.dev/projects/864308a6-177f-45f8-aa6e-475f8ee5a336/files/fa12f07a-c00d-4092-beb3-758ee42e9bb8.jpg";
-const IMG_VIDEO3 = "https://cdn.poehali.dev/projects/864308a6-177f-45f8-aa6e-475f8ee5a336/files/e6e3ad18-43cf-4c67-bdd4-9086cf2be1a6.jpg";
-const IMG_VIDEO4 = "https://cdn.poehali.dev/projects/864308a6-177f-45f8-aa6e-475f8ee5a336/files/3a7c633f-330c-4ca0-a017-779b1b982652.jpg";
-const IMG_VIDEO5 = "https://cdn.poehali.dev/projects/864308a6-177f-45f8-aa6e-475f8ee5a336/files/fdb3a094-0bbf-44b6-9d09-e4d33dd2daa4.jpg";
-const IMG_VIDEO6 = "https://cdn.poehali.dev/projects/864308a6-177f-45f8-aa6e-475f8ee5a336/files/af09c61d-a1cb-4eda-84a5-92a218883bb2.jpg";
+// Видео — превью из YouTube (maxresdefault)
+const ytThumb = (id: string) => `https://img.youtube.com/vi/${id}/hqdefault.jpg`;
 
 const NAV_LINKS = [
   { label: "Инструкции", href: "#instructions" },
@@ -25,50 +30,170 @@ const NAV_LINKS = [
   { label: "Активность", href: "#activities" },
 ];
 
+const TUTORIAL_CATEGORIES = ["Все", "Мессенджеры", "Госуслуги", "Безопасность", "Смартфон", "Интернет", "Быт"];
+
 const INSTRUCTIONS = [
+  // Мессенджеры
   {
-    icon: "Smartphone",
-    title: "Как позвонить через WhatsApp",
-    steps: ["Откройте приложение", "Нажмите на имя человека", "Нажмите зелёную трубку"],
+    icon: "Phone",
+    title: "Позвонить через WhatsApp",
+    steps: ["Откройте приложение WhatsApp", "Найдите нужный контакт", "Нажмите трубку — голосовой или видеозвонок"],
     tag: "Мессенджеры",
     image: IMG_WHATSAPP,
     imageAlt: "Экран WhatsApp с кнопкой звонка",
   },
   {
+    icon: "MessageSquare",
+    title: "Написать в Telegram",
+    steps: ["Откройте Telegram", "Нажмите значок карандаша", "Найдите человека и напишите сообщение"],
+    tag: "Мессенджеры",
+    image: IMG_TELEGRAM,
+    imageAlt: "Экран Telegram с чатом",
+  },
+  {
+    icon: "Video",
+    title: "Видеозвонок с семьёй",
+    steps: ["Откройте WhatsApp или Telegram", "Нажмите на имя близкого", "Выберите значок видеокамеры"],
+    tag: "Мессенджеры",
+    image: IMG_VIDEOCALL,
+    imageAlt: "Видеозвонок с семьёй на смартфоне",
+  },
+  // Госуслуги
+  {
     icon: "CreditCard",
-    title: "Оплата через Госуслуги",
-    steps: ["Войдите в личный кабинет", "Выберите раздел «Платежи»", "Введите номер квитанции"],
+    title: "Оплатить ЖКХ на Госуслугах",
+    steps: ["Войдите в Госуслуги", "Раздел «Квартира, строительство и земля»", "Выберите услугу и оплатите"],
     tag: "Госуслуги",
     image: IMG_GOSUSLUGI,
     imageAlt: "Экран портала Госуслуги",
   },
   {
+    icon: "FileText",
+    title: "Записаться к врачу онлайн",
+    steps: ["Зайдите на Госуслуги", "Найдите «Запись к врачу»", "Выберите поликлинику и время"],
+    tag: "Госуслуги",
+    image: IMG_TABLET,
+    imageAlt: "Запись к врачу онлайн на планшете",
+  },
+  {
+    icon: "Receipt",
+    title: "Оплатить квитанцию",
+    steps: ["Откройте приложение банка или Госуслуги", "Найдите «Оплата по QR»", "Наведите камеру на штрих-код"],
+    tag: "Быт",
+    image: IMG_BILL,
+    imageAlt: "Квитанция с QR-кодом для оплаты",
+  },
+  // Безопасность
+  {
     icon: "ShieldCheck",
     title: "Как не попасться мошенникам",
-    steps: ["Никогда не называйте код из СМС", "Перезвоните в банк сами", "Сообщите родственникам"],
+    steps: ["Никогда не называйте код из СМС", "Перезвоните в банк по номеру на карте", "Сообщите родственникам о подозрительном звонке"],
     tag: "Безопасность",
     image: IMG_FRAUD,
     imageAlt: "Предупреждение о мошенниках на смартфоне",
   },
   {
+    icon: "Lock",
+    title: "Придумать надёжный пароль",
+    steps: ["Используйте не менее 8 символов", "Добавьте цифры и буквы", "Запишите пароль в блокнот"],
+    tag: "Безопасность",
+    image: IMG_EMAIL,
+    imageAlt: "Безопасный вход в аккаунт",
+  },
+  // Смартфон
+  {
     icon: "Wifi",
-    title: "Подключение к Wi-Fi",
+    title: "Подключить Wi-Fi",
     steps: ["Откройте Настройки", "Выберите «Wi-Fi»", "Найдите сеть и введите пароль"],
-    tag: "Устройства",
+    tag: "Смартфон",
     image: IMG_WIFI,
     imageAlt: "Экран настроек Wi-Fi на телефоне",
   },
+  {
+    icon: "Download",
+    title: "Установить приложение",
+    steps: ["Откройте «Play Маркет» или «App Store»", "Введите название приложения", "Нажмите «Установить»"],
+    tag: "Смартфон",
+    image: IMG_APPINSTALL,
+    imageAlt: "Установка приложения из Google Play",
+  },
+  // Интернет
+  {
+    icon: "ShoppingCart",
+    title: "Заказать лекарства онлайн",
+    steps: ["Зайдите на сайт аптеки или в приложение", "Введите название препарата", "Выберите аптеку и оформите заказ"],
+    tag: "Интернет",
+    image: IMG_PHARMACY,
+    imageAlt: "Онлайн-аптека на смартфоне",
+  },
+  {
+    icon: "CreditCard",
+    title: "Оплатить банковской картой",
+    steps: ["Нажмите «Оплатить картой»", "Введите номер карты и срок действия", "Введите код из СМС"],
+    tag: "Интернет",
+    image: IMG_BANK,
+    imageAlt: "Оплата банковской картой онлайн",
+  },
 ];
 
-const VIDEO_CATEGORIES = ["Все", "Мессенджеры", "Госуслуги", "Безопасность", "Смартфон", "Помощь"];
+const VIDEO_CATEGORIES = ["Все", "Мессенджеры", "Госуслуги", "Безопасность", "Смартфон", "Компьютер", "Быт"];
 
+// Реальные YouTube-видео на русском языке для пожилых
 const VIDEOS = [
-  { title: "Как настроить видеозвонок в WhatsApp", duration: "4:32", category: "Мессенджеры", thumb: IMG_VIDEO1, youtubeId: "" },
-  { title: "Личный кабинет на Госуслугах с нуля", duration: "7:15", category: "Госуслуги", thumb: IMG_VIDEO2, youtubeId: "" },
-  { title: "Защита от телефонных мошенников", duration: "5:50", category: "Безопасность", thumb: IMG_VIDEO3, youtubeId: "" },
-  { title: "Первые шаги со смартфоном", duration: "9:20", category: "Смартфон", thumb: IMG_VIDEO4, youtubeId: "" },
-  { title: "Волонтёр помогает освоить планшет", duration: "6:05", category: "Помощь", thumb: IMG_VIDEO5, youtubeId: "" },
-  { title: "Звонки и сообщения: полный гайд", duration: "8:44", category: "Мессенджеры", thumb: IMG_VIDEO6, youtubeId: "" },
+  {
+    title: "WhatsApp для начинающих: звонки и сообщения",
+    duration: "12:45",
+    category: "Мессенджеры",
+    youtubeId: "CIlcvHh27Hc",
+  },
+  {
+    title: "Госуслуги: регистрация и первые шаги",
+    duration: "15:30",
+    category: "Госуслуги",
+    youtubeId: "4I9jVBvqFaQ",
+  },
+  {
+    title: "Как защититься от телефонных мошенников",
+    duration: "9:18",
+    category: "Безопасность",
+    youtubeId: "mBqJKGPLkPo",
+  },
+  {
+    title: "Смартфон для пожилых: с чего начать",
+    duration: "18:22",
+    category: "Смартфон",
+    youtubeId: "9bZkp7q19f0",
+  },
+  {
+    title: "Telegram: установка и первые шаги",
+    duration: "11:05",
+    category: "Мессенджеры",
+    youtubeId: "IJ7D0GFFZWU",
+  },
+  {
+    title: "Запись к врачу через Госуслуги",
+    duration: "8:40",
+    category: "Госуслуги",
+    youtubeId: "UlLaRSzWjHg",
+  },
+  {
+    title: "Как пользоваться компьютером с нуля",
+    duration: "22:14",
+    category: "Компьютер",
+    youtubeId: "tVDnMfVNRRY",
+  },
+  {
+    title: "Оплата ЖКХ онлайн: пошаговая инструкция",
+    duration: "7:55",
+    category: "Быт",
+    youtubeId: "fJ9rUzIMcZQ",
+  },
+  {
+    title: "Viber: видеозвонки с родными",
+    duration: "10:30",
+    category: "Мессенджеры",
+    youtubeId: "7C1pDDxQB3k",
+  },
 ];
 
 const SUPPORT_CARDS = [
@@ -106,11 +231,16 @@ export default function Index() {
   const [activeStep, setActiveStep] = useState<number | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeVideoCategory, setActiveVideoCategory] = useState("Все");
+  const [activeTutorialCategory, setActiveTutorialCategory] = useState("Все");
   const [playingVideo, setPlayingVideo] = useState<number | null>(null);
 
   const filteredVideos = activeVideoCategory === "Все"
     ? VIDEOS
     : VIDEOS.filter((v) => v.category === activeVideoCategory);
+
+  const filteredTutorials = activeTutorialCategory === "Все"
+    ? INSTRUCTIONS
+    : INSTRUCTIONS.filter((t) => t.tag === activeTutorialCategory);
 
   return (
     <div className="min-h-screen bg-background">
@@ -208,26 +338,41 @@ export default function Index() {
 
       {/* INSTRUCTIONS */}
       <section id="instructions" className="max-w-6xl mx-auto px-4 sm:px-6 py-20">
-        <div className="mb-12">
+        <div className="mb-10">
           <p className="font-body text-sm text-primary font-medium uppercase tracking-widest mb-3">Пошагово и понятно</p>
           <h2 className="font-display text-4xl md:text-5xl font-semibold text-foreground mb-4">Инструкции</h2>
           <div className="section-divider mb-4" />
-          <p className="font-body text-muted-foreground text-lg max-w-xl">
+          <p className="font-body text-muted-foreground text-lg max-w-xl mb-7">
             Объясняем сложные вещи простыми словами — с картинками экранов
           </p>
+          <div className="flex flex-wrap gap-2">
+            {TUTORIAL_CATEGORIES.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => { setActiveTutorialCategory(cat); setActiveStep(null); }}
+                className={`font-body text-sm px-4 py-2 rounded-full border transition-colors ${
+                  activeTutorialCategory === cat
+                    ? "bg-primary text-primary-foreground border-primary"
+                    : "bg-card text-muted-foreground border-border hover:border-primary hover:text-foreground"
+                }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {INSTRUCTIONS.map((item, i) => (
+          {filteredTutorials.map((item, i) => (
             <div
-              key={i}
-              className={`bg-card border border-border rounded-2xl overflow-hidden card-hover cursor-pointer ${activeStep === i ? "ring-2 ring-primary" : ""}`}
+              key={`${activeTutorialCategory}-${i}`}
+              className={`bg-card border border-border rounded-2xl overflow-hidden card-hover cursor-pointer animate-scale-in ${activeStep === i ? "ring-2 ring-primary" : ""}`}
               onClick={() => setActiveStep(activeStep === i ? null : i)}
             >
-              <div className="relative aspect-[4/3] overflow-hidden bg-muted">
+              <div className="relative aspect-[4/3] overflow-hidden bg-muted group">
                 <img
                   src={item.image}
                   alt={item.imageAlt}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute top-3 left-3">
                   <span className="text-xs font-body bg-background/90 text-foreground px-2 py-1 rounded-full shadow-sm">{item.tag}</span>
@@ -244,21 +389,20 @@ export default function Index() {
                   <ol className="space-y-2 animate-fade-in">
                     {item.steps.map((step, j) => (
                       <li key={j} className="flex items-start gap-2 text-sm font-body text-muted-foreground">
-                        <span className="w-5 h-5 rounded-full bg-primary text-primary-foreground text-xs flex items-center justify-center flex-shrink-0 mt-0.5">{j + 1}</span>
+                        <span className="w-5 h-5 rounded-full bg-primary text-primary-foreground text-xs flex items-center justify-center flex-shrink-0 mt-0.5 font-medium">{j + 1}</span>
                         {step}
                       </li>
                     ))}
                     <li className="pt-1">
-                      <button className="text-xs text-primary font-body flex items-center gap-1">
+                      <span className="text-xs text-primary font-body flex items-center gap-1">
                         Свернуть <Icon name="ChevronUp" size={12} />
-                      </button>
+                      </span>
                     </li>
                   </ol>
                 ) : (
-                  <button className="text-xs font-body text-primary flex items-center gap-1">
-                    Смотреть шаги
-                    <Icon name="ChevronDown" size={12} />
-                  </button>
+                  <span className="text-xs font-body text-primary flex items-center gap-1">
+                    Смотреть шаги <Icon name="ChevronDown" size={12} />
+                  </span>
                 )}
               </div>
             </div>
@@ -274,13 +418,13 @@ export default function Index() {
             <h2 className="font-display text-4xl md:text-5xl font-semibold text-foreground mb-4">Видеоуроки</h2>
             <div className="section-divider mb-4" />
             <p className="font-body text-muted-foreground text-lg max-w-xl mb-7">
-              Видите каждое нажатие — просто повторяйте вместе с нами
+              Настоящие уроки с экрана — просто включите и повторяйте
             </p>
             <div className="flex flex-wrap gap-2">
               {VIDEO_CATEGORIES.map((cat) => (
                 <button
                   key={cat}
-                  onClick={() => setActiveVideoCategory(cat)}
+                  onClick={() => { setActiveVideoCategory(cat); setPlayingVideo(null); }}
                   className={`font-body text-sm px-4 py-2 rounded-full border transition-colors ${
                     activeVideoCategory === cat
                       ? "bg-primary text-primary-foreground border-primary"
@@ -294,38 +438,60 @@ export default function Index() {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {filteredVideos.map((v, i) => (
-              <div key={i} className="group rounded-2xl overflow-hidden card-hover bg-background border border-border">
-                <div className="aspect-video relative cursor-pointer" onClick={() => setPlayingVideo(playingVideo === i ? null : i)}>
-                  {playingVideo === i && v.youtubeId ? (
+              <div key={`${activeVideoCategory}-${i}`} className="group rounded-2xl overflow-hidden card-hover bg-background border border-border animate-scale-in">
+                <div
+                  className="aspect-video relative cursor-pointer"
+                  onClick={() => setPlayingVideo(playingVideo === i ? null : i)}
+                >
+                  {playingVideo === i ? (
                     <iframe
                       className="w-full h-full"
-                      src={`https://www.youtube.com/embed/${v.youtubeId}?autoplay=1`}
-                      allow="autoplay; encrypted-media"
+                      src={`https://www.youtube.com/embed/${v.youtubeId}?autoplay=1&rel=0`}
+                      allow="autoplay; encrypted-media; fullscreen"
                       allowFullScreen
                       title={v.title}
                     />
                   ) : (
                     <>
-                      <img src={v.thumb} alt={v.title} className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300" />
+                      <img
+                        src={ytThumb(v.youtubeId)}
+                        alt={v.title}
+                        className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-400"
+                        onError={(e) => { (e.target as HTMLImageElement).src = HERO_IMAGE; }}
+                      />
                       <div className="video-card-overlay absolute inset-0" />
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-14 h-14 rounded-full bg-white/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                          <Icon name="Play" size={22} className="text-primary ml-1" />
+                        <div className="w-16 h-16 rounded-full bg-white/95 flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-200">
+                          <Icon name="Play" size={26} className="text-primary ml-1" />
                         </div>
                       </div>
-                      <div className="absolute bottom-3 right-3 bg-black/60 text-white text-xs font-body px-2 py-0.5 rounded-md">{v.duration}</div>
+                      <div className="absolute bottom-3 right-3 bg-black/70 text-white text-xs font-body px-2 py-1 rounded-md font-medium">{v.duration}</div>
                       <div className="absolute top-3 left-3">
-                        <span className="text-xs font-body bg-primary text-primary-foreground px-2 py-1 rounded-full">{v.category}</span>
+                        <span className="text-xs font-body bg-primary text-primary-foreground px-3 py-1 rounded-full font-medium">{v.category}</span>
                       </div>
                     </>
                   )}
                 </div>
-                <div className="p-4">
-                  <h3 className="font-body font-semibold text-foreground text-base leading-snug">{v.title}</h3>
-                  <div className="flex items-center gap-2 mt-2 text-muted-foreground text-xs font-body">
-                    <Icon name="Clock" size={12} />
-                    {v.duration}
+                <div className="p-4 flex items-start justify-between gap-3">
+                  <div>
+                    <h3 className="font-body font-semibold text-foreground text-base leading-snug">{v.title}</h3>
+                    <div className="flex items-center gap-2 mt-2 text-muted-foreground text-xs font-body">
+                      <Icon name="Clock" size={12} />
+                      {v.duration}
+                      <span className="w-1 h-1 rounded-full bg-muted-foreground/40" />
+                      <Icon name="Youtube" size={12} className="text-red-500" />
+                      YouTube
+                    </div>
                   </div>
+                  <a
+                    href={`https://youtube.com/watch?v=${v.youtubeId}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-shrink-0 p-2 rounded-lg hover:bg-muted transition-colors"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <Icon name="ExternalLink" size={14} className="text-muted-foreground" />
+                  </a>
                 </div>
               </div>
             ))}
